@@ -1,0 +1,27 @@
+flowchart-diagram
+
+
+title EagleEye Process Flow
+
+// Define nodes and relationships
+Start [shape: oval, icon: flag] > Get image of person [icon: image]
+Get image of person > Enter name clue [icon: file-text]
+Enter name clue > Choose platform [shape: diamond, icon: globe]
+Choose platform > Search Instagram [icon: instagram]: Instagram
+Choose platform > Search YouTube [icon: youtube]: YouTube
+Choose platform > Search Facebook [icon: facebook]: Facebook
+Choose platform > Search Twitter [icon: twitter]: Twitter
+Search Instagram > Analyze results [icon: search]
+Search YouTube > Analyze results [icon: search]
+Search Facebook > Analyze results [icon: search]
+Search Twitter > Analyze results [icon: search]
+Analyze results > End [shape: oval, icon: check]
+
+// Define Groups
+For each platform [icon: repeat] {
+  Search Instagram
+  Search YouTube
+  Search Facebook
+  Search Twitter
+  Analyze results
+}
